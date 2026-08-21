@@ -658,6 +658,7 @@
 
 .skill-group { margin-bottom: 20px; }
 .skill-group-label { font-family: var(--mono); font-size: 14px; font-weight: 900; color: #000000; display: block; margin-bottom: 10px; }
+.about-side-group .skill-group-label { color: var(--accent-ink); text-transform: uppercase; }
 
 /* ---------- Contact ---------- */
 .contact-grid {
@@ -715,7 +716,9 @@
 .footer { border-top: 1px solid var(--line); padding: 36px 0; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
 .footer-mono { font-family: var(--mono); font-size: 14px; color: var(--ink-faint); }
-.footer-links { display: flex; gap: 22px; font-family: var(--mono); font-size: 15px; color: var(--ink-soft); }
+.footer-links { display: flex; gap: 18px; color: var(--ink-soft); }
+.footer-links a { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; }
+.footer-links svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .footer-links a:hover { color: var(--accent-ink); }
 
 /* ---------- Responsive ---------- */
@@ -767,11 +770,11 @@
 
   .project-demo { margin-bottom: 28px; aspect-ratio: 4 / 3; }
   .project-demo-gallery {
-    flex-direction: column;
+    flex-direction: row;
     padding: 14px;
     gap: 14px;
   }
-  .project-demo-gallery img { width: 100%; height: calc(50% - 7px); }
+  .project-demo-gallery img { width: calc(50% - 7px); height: 100%; }
   .project-demo video { width: 96%; height: 96%; }
 
   .project-metrics { gap: 20px; padding: 18px 0; margin-bottom: 28px; }
@@ -789,4 +792,19 @@
   .footer { padding: 28px 0; }
   .footer-inner { align-items: flex-start; }
   .footer-links { flex-wrap: wrap; gap: 12px 18px; }
+
+  .about-grid { display: grid; row-gap: 28px; }
+  .about-side,
+  .about-main { display: contents; }
+  .about-side > .avatar-photo,
+  .about-side > .avatar-placeholder { order: 1; }
+  .about-side > h1 { order: 2; }
+  .about-side > .hero-title { order: 3; }
+  .about-side > .about-bio { order: 4; }
+  .about-main > .about-block:nth-child(3) { order: 5; }
+  .about-side > .about-side-group:first-of-type { order: 6; }
+  .about-side > .about-side-group:last-of-type { order: 7; }
+  .about-main > .about-block:nth-child(1) { order: 8; }
+  .about-main > .about-block:nth-child(2) { order: 9; }
+  .about-main > .about-block:nth-child(4) { order: 10; }
 }

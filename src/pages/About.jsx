@@ -10,13 +10,13 @@ export default function About() {
           <h1>{profile.name}</h1>
           <p className="hero-title" style={{ fontSize: 15 }}>{profile.title}</p>
           <p className="about-bio">{profile.summary}</p>
-          <div className="skill-group">
+          <div className="skill-group about-side-group">
             <span className="skill-group-label">Soft skills</span>
             <div className="tool-tags">
               {softSkills.map((s) => <span key={s}>{s}</span>)}
             </div>
           </div>
-          <div className="skill-group">
+          <div className="skill-group about-side-group">
             <span className="skill-group-label">Interests</span>
             <div className="tool-tags">
               {interests.map((s) => <span key={s}>{s}</span>)}

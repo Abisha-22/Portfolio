@@ -76,7 +76,6 @@ export default function Contact() {
             />
           </label>
           <button type="submit" className="btn">Send message</button>
-          <p className="contact-form-note">Opens your email client with this pre-filled.</p>
         </form>
       </div>
     </section>

@@ -17,6 +17,9 @@ export default function Home() {
               {profile.name}
               <span className="hero-title">{profile.title}</span>
             </h1>
+            <div className="hero-avatar-tag">
+              <span className="nav-mark-dot" /> {profile.location}
+            </div>
             <p className="hero-lede">{profile.mainSkill}.</p>
             <div className="hero-actions">
               <Link to="/work" className="btn">See the work</Link>
@@ -26,9 +29,6 @@ export default function Home() {
           </div>
           <div className="hero-avatar">
             <Avatar size={240} />
-            <div className="hero-avatar-tag">
-              <span className="nav-mark-dot" /> {profile.location}
-            </div>
           </div>
         </div>
       </section>
